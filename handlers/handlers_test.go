@@ -26,7 +26,7 @@ func TestRedirectHandler(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			req := httptest.NewRequest("GET", "http://localhost:8080", nil)
 			if tt.userAgent != "" {
-				req.Header.Set("User -Agent", tt.userAgent)
+				req.Header.Set("User-Agent", tt.userAgent)
 			}
 			if tt.customHeader != "" {
 				req.Header.Set("X-Proxy-Detection", "true")

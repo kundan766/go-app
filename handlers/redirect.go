@@ -7,7 +7,7 @@ import (
 
 func RedirectHandler(w http.ResponseWriter, r *http.Request) {
 
-	userAgent := r.Header.Get("User -Agent")
+	userAgent := r.Header.Get("User-Agent")
 	if utils.IsProxyTool(userAgent) {
 		// Redirect to Yahoo if a proxy tool is detected
 		http.Redirect(w, r, "https://www.yahoo.com", http.StatusFound)
